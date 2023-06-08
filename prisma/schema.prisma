@@ -1,0 +1,15 @@
+// Prisma schema https://pris.ly/d/prisma-schema
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["jsonProtocol"]
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./db.sqlite"
+}
+
+model Test {
+  id Int @id @default(autoincrement())
+}
